@@ -23,15 +23,15 @@ class MainActivityTest {
         onView(withId(R.id.et_first_number)).perform(ViewActions.typeText("4"))
         onView(withId(R.id.et_second_number)).perform(ViewActions.typeText("4"))
         onView(withId(R.id.btn_plus)).perform(ViewActions.click())
-        onView(withId(R.id.tv_result)).check(ViewAssertions.matches(ViewMatchers.withText("4")))
+        onView(withId(R.id.tv_result)).check(ViewAssertions.matches(ViewMatchers.withText("8")))
     }
 
     @Test
     fun simpleDivideAdd() {
-        onView(withId(R.id.et_first_number)).perform(ViewActions.typeText("4"))
+        onView(withId(R.id.et_first_number)).perform(ViewActions.typeText("8"))
         onView(withId(R.id.et_second_number)).perform(ViewActions.typeText("4"))
         onView(withId(R.id.btn_divide)).perform(ViewActions.click())
-        onView(withId(R.id.tv_result)).check(ViewAssertions.matches(ViewMatchers.withText("4")))
+        onView(withId(R.id.tv_result)).check(ViewAssertions.matches(ViewMatchers.withText("2")))
     }
 
 }
